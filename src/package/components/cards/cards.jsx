@@ -25,13 +25,13 @@ const CARD_TYPE_MAPPING = {
     basics: BasicsCard,
     projects: ProjectsCard,
     language: LanguagesCard,
-    dreamjob: DreamJobCard,
+    // dreamjob: DreamJobCard,
     gifs: GifsCard,
     experiences: ExperiencesCard,
     studies: StudiesCard,
     skills: SkillsCard,
-    soundtrack: SoundtrackCard,
-    interestedBy: InterestedByCard
+    soundtrack: SoundtrackCard
+    // interestedBy: InterestedByCard
 };
 
 const CardsComponent = ({ cardsOrder = DEFAULT_CARD_ORDER, side, maxCardsPerRow }) => {

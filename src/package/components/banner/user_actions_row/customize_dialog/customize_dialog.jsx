@@ -82,9 +82,9 @@ const CustomizeDialogComponent = ({ open, onClose, customizationOptions }) => {
             }}
             onClose={onClose}
         >
-            <DialogTitle>
+            {/* <DialogTitle>
                 <FormattedMessage id="Banner.actions.customize.dialog.title" defaultMessage="Customize your profile" />
-            </DialogTitle>
+            </DialogTitle> */}
             <DialogContent
                 classes={{
                     root: classes.content

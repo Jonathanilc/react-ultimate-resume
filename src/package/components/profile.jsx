@@ -39,7 +39,7 @@ const messages = {
 };
 const useStyles = createUseStyles(styles);
 
-const DEFAULT_OPTIONS ={
+const DEFAULT_OPTIONS = {
     locale: 'en',
     customization: {
         imageHeader: {
@@ -48,8 +48,8 @@ const DEFAULT_OPTIONS ={
         }
     },
     maxCardsPerRow: null,
-    showContactInfos: false,
-    dismissFooter: false
+    showContactInfos: true,
+    dismissFooter: true
 };
 
 const DEFAULT_OBJECT = {};
@@ -159,6 +159,7 @@ const WithProvidersDeveloperProfile = ({
         () => mergeWith(cloneDeep(DEFAULT_OPTIONS), JSON.parse(JSON.stringify(options || {})), mergeOmitNull),
         [JSON.stringify(options)]
     );
+    console.log(mergedOptions);
 
     const { locale, customization } = mergedOptions;
     const builtTheme = useMemo(() => buildTheme(customization?.theme), [customization?.theme]);

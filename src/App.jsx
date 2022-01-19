@@ -37,14 +37,15 @@ function App() {
 
     const handleClick = useCallback(async () => {
         // eslint-disable-next-line no-undef
-        const blob = new Blob([JSON.stringify({ ...data, resumeCustomization: customization })], {
-            type: 'text/plain; charset=utf-8'
-        });
-        download(
-            blob,
-            `${`Resume-${data?.basics?.name || 'Developer'}`.replace(' ', '-')}.json`,
-            'text/plain; charset=utf-8'
-        );
+        // const blob = new Blob([JSON.stringify({ ...data, resumeCustomization: customization })], {
+        //     type: 'text/plain; charset=utf-8'
+        // });
+        // download(
+        //     blob,
+        //     `${`Resume-${data?.basics?.name || 'Developer'}`.replace(' ', '-')}.json`,
+        //     'text/plain; charset=utf-8'
+        // );
+        window.open('https://sharing-bucket-for-jonathan.s3.amazonaws.com/resume.pdf', '_blank').focus();
     }, [JSON.stringify(data), JSON.stringify(customization)]);
 
     return (
@@ -54,7 +55,7 @@ function App() {
             onEdit={onEdit}
             onCustomizationChanged={onCustomizationChanged}
             options={{
-                locale: 'fr',
+                locale: 'en',
                 // side: 'back',
                 apiKeys: {
                     giphy: process.env.REACT_APP_GIPHY
