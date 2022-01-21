@@ -1,6 +1,6 @@
 {
     "name": "@welovedevs/react-ultimate-resume",
-    "homepage" : "https://jonathanilc.github.io/react-ultimate-resume/",
+    "homepage": "",
     "version": "1.1.11-beta.1",
     "description": "Developer profile for W3D",
     "main": "lib/index.js",
@@ -116,6 +116,7 @@
         "readline-sync": "^1.4.10",
         "rimraf": "^3.0.0",
         "serve": "^11.3.0",
+        "serverless-s3-sync": "^1.17.3",
         "tailwindcss": "npm:@tailwindcss/postcss7-compat@2.1.4",
         "typescript": "^4.0.5"
     },
